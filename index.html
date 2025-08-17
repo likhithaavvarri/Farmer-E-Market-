@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FarmToHome</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="favicon.ico">
+</head>
+<body>
+    <header>
+        <div class="container nav-container">
+            <div class="logo">FarmToHome</div>
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="#home" class="nav-link active">Home</a></li>
+                    <li><a href="#products" class="nav-link">Products</a></li>
+                    <li><a href="#" id="cart-btn"><span>Cart</span> <span id="cart-count">0</span></a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <section class="banner" id="home">
+            <div class="container banner-content">
+                <h1>Fresh From Farm To Your Home</h1>
+                <p>Connecting you directly with local farmers for the freshest organic produce. Shop healthy, support farmers, and enjoy doorstep delivery!</p>
+            </div>
+        </section>
+        <section class="intro">
+            <div class="container">
+                <h2>Welcome to FarmToHome</h2>
+                <p>FarmToHome is your trusted platform to buy fresh, organic, and locally grown farm products directly from farmers. We ensure quality, transparency, and fair prices for both farmers and customers. Start shopping and make a healthy choice today!</p>
+            </div>
+        </section>
+        <section class="products-section" id="products">
+            <div class="container">
+                <h2>Our Products</h2>
+                <div class="products-grid" id="products-list">
+                    <!-- Products will be injected here by script.js -->
+                </div>
+            </div>
+        </section>
+    </main>
+    <!-- Cart Modal -->
+    <div id="cart-modal" class="cart-modal">
+        <div class="cart-modal-content">
+            <span class="close" id="close-cart">&times;</span>
+            <h2>Your Cart</h2>
+            <div id="cart-items">
+                <!-- Cart items will be injected here by script.js -->
+            </div>
+            <div class="cart-total">
+                Total: $<span id="cart-total">0.00</span>
+            </div>
+            <button id="checkout-btn">Checkout</button>
+        </div>
+    </div>
+    <footer>
+        <div class="container footer-content">
+            <div class="footer-left">
+                <h3>FarmToHome</h3>
+                <p>Contact: info@farmtohome.com<br>Phone: +1 234 567 8901</p>
+            </div>
+            <div class="footer-right">
+                <a href="#" class="social-icon" title="Facebook"><svg width="24" height="24" fill="currentColor"><path d="M22 12c0-5.522-4.477-10-10-10S2 6.478 2 12c0 5 3.657 9.127 8.438 9.877v-6.987h-2.54v-2.89h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.242 0-1.63.771-1.63 1.562v1.875h2.773l-.443 2.89h-2.33v6.987C18.343 21.127 22 17 22 12z"/></svg></a>
+                <a href="#" class="social-icon" title="Twitter"><svg width="24" height="24" fill="currentColor"><path d="M22.46 6c-.77.35-1.6.59-2.47.7a4.3 4.3 0 0 0 1.88-2.37 8.59 8.59 0 0 1-2.72 1.04A4.28 4.28 0 0 0 16.11 4c-2.37 0-4.29 1.92-4.29 4.29 0 .34.04.67.11.99C7.69 9.13 4.07 7.38 1.64 4.7c-.37.64-.58 1.38-.58 2.17 0 1.5.76 2.82 1.92 3.6-.71-.02-1.38-.22-1.97-.54v.05c0 2.1 1.5 3.85 3.5 4.25-.36.1-.74.16-1.13.16-.28 0-.54-.03-.8-.08.54 1.68 2.11 2.9 3.97 2.93A8.6 8.6 0 0 1 2 19.54c-.29 0-.57-.02-.85-.05A12.13 12.13 0 0 0 8.29 21.5c7.55 0 11.68-6.26 11.68-11.68 0-.18-.01-.36-.02-.54A8.18 8.18 0 0 0 22.46 6z"/></svg></a>
+                <a href="#" class="social-icon" title="Instagram"><svg width="24" height="24" fill="currentColor"><path d="M12 2.2c3.2 0 3.584.012 4.85.07 1.17.056 1.97.24 2.43.41.59.22 1.01.48 1.45.92.44.44.7.86.92 1.45.17.46.354 1.26.41 2.43.058 1.266.07 1.65.07 4.85s-.012 3.584-.07 4.85c-.056 1.17-.24 1.97-.41 2.43-.22.59-.48 1.01-.92 1.45-.44.44-.86.7-1.45.92-.46.17-1.26.354-2.43.41-1.266.058-1.65.07-4.85.07s-3.584-.012-4.85-.07c-1.17-.056-1.97-.24-2.43-.41-.59-.22-1.01-.48-1.45-.92-.44-.44-.7-.86-.92-1.45-.17-.46-.354-1.26-.41-2.43C2.212 15.784 2.2 15.4 2.2 12s.012-3.584.07-4.85c.056-1.17.24-1.97.41-2.43.22-.59.48-1.01.92-1.45.44-.44.86-.7 1.45-.92.46-.17 1.26-.354 2.43-.41C8.416 2.212 8.8 2.2 12 2.2zm0-2.2C8.736 0 8.332.013 7.052.072 5.77.13 4.77.31 3.97.54c-.8.23-1.48.54-2.16 1.22C1.13 2.44.82 3.12.59 3.92.36 4.72.18 5.72.12 7.01.06 8.29.05 8.69.05 12c0 3.31.01 3.71.07 4.99.06 1.29.24 2.29.47 3.09.23.8.54 1.48 1.22 2.16.68.68 1.36.99 2.16 1.22.8.23 1.8.41 3.09.47C8.29 23.94 8.69 23.95 12 23.95c3.31 0 3.71-.01 4.99-.07 1.29-.06 2.29-.24 3.09-.47.8-.23 1.48-.54 2.16-1.22.68-.68.99-1.36 1.22-2.16.23-.8.41-1.8.47-3.09.06-1.28.07-1.68.07-4.99 0-3.31-.01-3.71-.07-4.99-.06-1.29-.24-2.29-.47-3.09-.23-.8-.54-1.48-1.22-2.16C20.44 1.13 19.76.82 18.96.59c-.8-.23-1.8-.41-3.09-.47C15.71.06 15.31.05 12 .05zm0 5.8a6.15 6.15 0 1 0 0 12.3 6.15 6.15 0 0 0 0-12.3zm0 10.15a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.4-10.85a1.44 1.44 0 1 0 0 2.88 1.44 1.44 0 0 0 0-2.88z"/></svg></a>
+            </div>
+        </div>
+        <div class="footer-bottom">&copy; 2024 FarmToHome. All rights reserved.</div>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
